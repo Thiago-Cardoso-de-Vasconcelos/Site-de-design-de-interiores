@@ -35,7 +35,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='md:container flex justify-between content-center relative py-4'>
+    <nav className='md:container flex justify-between content-center relative py-4 z-50'>
       {/* Logo section  */}
       <div className='flex items-center gap-1 px-4'>
         <Image src={Logo} alt='Logo' width={20} height={20} />
@@ -82,14 +82,12 @@ const Navbar = () => {
 
       {/* Button section  */}
       <div className='hidden md:flex'>
-        <button className='text-sm lg:text-base border-2 border-black px-4 py-2 shadow-[5px_5px_0px_0px]'>
-          Experimente Grátis
-        </button>
+        <button className='primary-btn '>Experimente Grátis</button>
       </div>
 
       {/* Links - Exibidos no menu hambúrguer */}
       {isOpen && (
-        <div className='md:hidden absolute top-16 w-full border-b-8  border-black pb-10 bg-zinc-200'>
+        <div className='md:hidden absolute top-16 w-full border-b-8  border-black pb-10 bg-zinc-50'>
           {/* style={{ height: 'calc(100vh - 64px)' }} */}
           <div className='flex flex-col m-auto justify-center content-center text-center gap-5 my-9'>
             {NavLinks.map((link) => {
@@ -105,9 +103,7 @@ const Navbar = () => {
           </div>
 
           <div className='flex justify-center'>
-            <button className='text-sm lg:text-base border-2 border-black px-4 py-2 shadow-[5px_5px_0px_0px]'>
-              Experimente Grátis
-            </button>
+            <button className='primary-btn'>Experimente Grátis</button>
           </div>
         </div>
       )}
